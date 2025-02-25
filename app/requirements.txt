@@ -1,0 +1,60 @@
+# Web Framework
+Flask==2.3.3
+Flask-SQLAlchemy==3.0.5
+Flask-Migrate==4.0.4
+Flask-RESTful==0.3.10
+Flask-JWT-Extended==4.5.2
+Flask-Cors==4.0.0
+
+# Database
+SQLAlchemy==2.0.19
+psycopg2-binary==2.9.7
+alembic==1.11.1
+
+# Storage
+boto3==1.28.30  # AWS S3
+oss2==2.18.1    # Aliyun OSS
+aiofiles==23.2.1
+
+# Async Support
+aiohttp==3.8.5
+asyncio==3.4.3
+
+# Validation & Serialization
+marshmallow==3.20.1
+pydantic==2.3.0
+
+# Cache
+redis==4.6.0
+Flask-Caching==2.0.2
+
+# Task Queue
+celery==5.3.1
+flower==2.0.1  # Celery monitoring
+
+# Security
+bcrypt==4.0.1
+PyJWT==2.8.0
+cryptography==41.0.3
+
+# Utils
+python-dotenv==1.0.0
+requests==2.31.0
+python-magic==0.4.27  # File type detection
+Pillow==10.0.0      # Image processing
+
+# Monitoring & Logging
+prometheus-client==0.17.1
+sentry-sdk==1.29.2
+structlog==23.1.0
+
+# Testing
+pytest==7.4.0
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+factory-boy==3.3.0
+
+# Development
+black==23.7.0
+flake8==6.1.0
+mypy==1.5.1 
