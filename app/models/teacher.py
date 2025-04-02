@@ -6,10 +6,15 @@ class Teacher(db.Model):
     __tablename__ = 'teachers'
     
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-    subject = db.Column(db.String(50))  # 教授科目
-    class_ids = db.Column(db.JSON)      # 负责的班级ID列表
-    teaching_stats = db.Column(db.JSON)  # 教学统计数据
+    teacher_id = db.Column(db.String(50), unique=True, nullable=False, comment='工号')
+    name = db.Column(db.String(50), nullable=False, comment='姓名')
+    gender = db.Column(db.String(1), nullable=False, comment='性别')
+    title = db.Column(db.String(50), nullable=False, comment='职称')
+    department = db.Column(db.String(100), nullable=False, comment='所属部门')
+    phone = db.Column(db.String(20), nullable=False, comment='联系电话')
+    email = db.Column(db.String(120), nullable=False, comment='邮箱')
+    office = db.Column(db.String(50), nullable=True, comment='办公室')
+    research_area = db.Column(db.Text, nullable=True, comment='研究方向')
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
     
@@ -18,13 +23,18 @@ class Teacher(db.Model):
     resources = db.relationship('Resource', backref='teacher', lazy='dynamic')
     
     def to_dict(self):
-        """转换为字典格式"""
+        """转换为字典"""
         return {
             'id': self.id,
-            'user_id': self.user_id,
-            'subject': self.subject,
-            'class_ids': self.class_ids,
-            'teaching_stats': self.teaching_stats,
-            'created_at': self.created_at.isoformat(),
-            'updated_at': self.updated_at.isoformat()
+            'teacher_id': self.teacher_id,
+            'name': self.name,
+            'gender': self.gender,
+            'title': self.title,
+            'department': self.department,
+            'phone': self.phone,
+            'email': self.email,
+            'office': self.office,
+            'research_area': self.research_area,
+            'created_at': self.created_at.isoformat() if self.created_at else None,
+            'updated_at': self.updated_at.isoformat() if self.updated_at else None
         } 
