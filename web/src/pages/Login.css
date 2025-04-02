@@ -1,0 +1,95 @@
+.login-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+.login-card {
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: white;
+}
+
+.login-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.login-title h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1890ff;
+  margin-bottom: 8px;
+}
+
+.login-title p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+.login-form {
+  padding: 0 8px;
+}
+
+.login-form .ant-form-item {
+  margin-bottom: 24px;
+}
+
+.login-form .ant-input-affix-wrapper {
+  height: 40px;
+  padding: 4px 11px;
+}
+
+.login-form .ant-input {
+  font-size: 14px;
+}
+
+.input-icon {
+  color: #1890ff;
+}
+
+.login-button {
+  height: 40px;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.login-links {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.login-links a {
+  color: #1890ff;
+  margin: 0 12px;
+  font-size: 14px;
+}
+
+.login-links a:hover {
+  color: #40a9ff;
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+  .login-container {
+    padding: 16px;
+  }
+  
+  .login-title h1 {
+    font-size: 20px;
+  }
+  
+  .login-title p {
+    font-size: 14px;
+  }
+} 

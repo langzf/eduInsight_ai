@@ -1,0 +1,1 @@
+from app import create_app; from app.models.user import User; app = create_app("development"); import sys; sys.path.append("."); with app.app_context(): print("用户记录:"); [print(f"ID: {u.id}, Phone: {u.phone}, Hash: {u.password_hash}") for u in User.query.all()]

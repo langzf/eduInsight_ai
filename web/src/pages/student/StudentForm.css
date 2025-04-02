@@ -1,0 +1,87 @@
+.student-form-container {
+  padding: 24px;
+  background: #fff;
+  min-height: 100%;
+}
+
+.student-form-container .ant-card {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.student-form-container .ant-card-head-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.form-section {
+  margin-bottom: 32px;
+}
+
+.form-section h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #1890ff;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 768px) {
+  .student-form-container {
+    padding: 16px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .form-actions {
+    margin-top: 24px;
+  }
+}
+
+/* 表单项样式优化 */
+.student-form-container .ant-form-item-label > label {
+  font-weight: 500;
+}
+
+.student-form-container .ant-input,
+.student-form-container .ant-select-selector {
+  border-radius: 4px;
+}
+
+.student-form-container .ant-input:hover,
+.student-form-container .ant-select-selector:hover {
+  border-color: #1890ff;
+}
+
+.student-form-container .ant-input:focus,
+.student-form-container .ant-select-selector:focus {
+  border-color: #1890ff;
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+/* 按钮样式 */
+.student-form-container .ant-btn {
+  height: 40px;
+  padding: 0 24px;
+  font-size: 14px;
+  border-radius: 4px;
+} 

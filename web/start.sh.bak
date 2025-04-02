@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# 设置日志文件
+LOG_FILE="../logs/frontend.log"
+mkdir -p ../logs
+
+# 记录启动时间
+echo "=== 前端服务启动日志 $(date) ===" >> "$LOG_FILE"
+
+# 确保当前目录是web目录
+if [ ! -f "./package.json" ]; then
+  echo "错误: 请在web目录下运行此脚本" | tee -a "$LOG_FILE"
+  exit 1
+fi
+
+# 检查node是否安装
+if ! command -v node &> /dev/null; then
+  echo "错误: 未安装Node.js，请先安装Node.js" | tee -a "$LOG_FILE"
+  exit 1
+fi
+
+# 检查是否存在.env文件
+if [ ! -f ".env" ]; then
+  echo "创建.env文件..." | tee -a "$LOG_FILE"
+  echo "REACT_APP_API_URL=http://localhost:6060/api/v1" > .env
+fi
+
+# 记录Node.js和npm版本
+echo "Node.js 版本: $(node -v)" >> "$LOG_FILE"
+echo "npm 版本: $(npm -v)" >> "$LOG_FILE"
+
+# 清理和安装依赖
+echo "清理node_modules..." >> "$LOG_FILE"
+rm -rf node_modules package-lock.json
+echo "安装依赖..." >> "$LOG_FILE"
+npm install >> "$LOG_FILE" 2>&1
+
+# 清理ajv相关依赖并重新安装
+echo "重新安装ajv相关依赖..." >> "$LOG_FILE"
+rm -rf node_modules/ajv*
+npm install ajv@latest >> "$LOG_FILE" 2>&1
+
+# 设置固定端口并启动服务
+echo "启动前端服务在端口5050..." >> "$LOG_FILE"
+PORT=5050 BROWSER=none npm start >> "$LOG_FILE" 2>&1 

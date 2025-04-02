@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育洞察AI系统</title>
+    <style>
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .status {
+            display: inline-block;
+            background: #2ecc71;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>教育洞察AI系统</h1>
+        
+        <div class="card">
+            <h2>系统状态 <span class="status">运行中</span></h2>
+            <p>欢迎使用教育洞察AI系统，这是一个基于人工智能的教育分析平台。</p>
+        </div>
+        
+        <div class="card">
+            <h2>服务测试</h2>
+            <p>您可以通过以下链接测试系统各项功能：</p>
+            <ul>
+                <li><a href="/ping">Ping测试</a> - 检查服务是否正常响应</li>
+                <li><a href="/hello">Hello测试</a> - 测试中文显示</li>
+                <li><a href="/api/v1/auth/status">API状态</a> - 检查API服务状态</li>
+            </ul>
+        </div>
+        
+        <div class="card">
+            <h2>登录/注册</h2>
+            <p>请使用以下链接登录或注册新账户：</p>
+            <a href="/login" class="btn">登录系统</a>
+            <a href="/register" class="btn">注册账户</a>
+        </div>
+        
+        <footer>
+            &copy; 2025 教育洞察AI系统 - 版权所有
+        </footer>
+    </div>
+</body>
+</html> 

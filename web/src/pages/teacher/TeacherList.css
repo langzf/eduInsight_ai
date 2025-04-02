@@ -1,0 +1,56 @@
+.teacher-list-container {
+  padding: 24px;
+  background: #fff;
+  min-height: 100%;
+}
+
+.teacher-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.teacher-list-header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* 表格样式优化 */
+.teacher-list-container .ant-table-thead > tr > th {
+  background: #f7f7f7;
+  font-weight: 500;
+}
+
+.teacher-list-container .ant-table-tbody > tr:hover > td {
+  background: #f5f5f5;
+}
+
+/* 操作按钮样式 */
+.teacher-list-container .ant-btn {
+  border-radius: 4px;
+}
+
+.teacher-list-container .ant-space {
+  gap: 8px;
+}
+
+/* 分页器样式 */
+.teacher-list-container .ant-pagination {
+  margin-top: 16px;
+  text-align: right;
+}
+
+/* 响应式布局 */
+@media screen and (max-width: 768px) {
+  .teacher-list-container {
+    padding: 16px;
+  }
+
+  .teacher-list-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+} 
